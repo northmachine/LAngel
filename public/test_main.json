@@ -1,0 +1,13 @@
+{
+"balance":"123",
+"users":[{
+    "username":"xiaobaige",
+    "sex":"male",
+    "time":"2018/08/16"},
+    {
+        "username":"llll",
+        "sex":"male",
+        "time":"2018/08/17"
+    }]
+}
+

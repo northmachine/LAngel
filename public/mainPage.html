@@ -1,0 +1,789 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Flatfy Free Flat and Responsive HTML5 Template ">
+    <meta name="author" content="">
+
+    <title>LAngle – Caring for health</title>
+
+	
+    <!-- Bootstrap core CSS -->
+    <link href="css/css2/bootstrap.min.css" rel="stylesheet">
+ 
+    <!-- Custom Google Web Font -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+	
+    <!-- Custom CSS-->
+    <link href="css/css2/general.css" rel="stylesheet">
+	
+	 <!-- Owl-Carousel -->
+    <link href="css/css2/custom.css" rel="stylesheet">
+	<link href="css/css2/owl.carousel.css" rel="stylesheet">
+    <link href="css/css2/owl.theme.css" rel="stylesheet">
+	<link href="css/css2/style.css" rel="stylesheet">
+	<link href="css/css2/animate.css" rel="stylesheet">
+	
+	<!-- Magnific Popup core CSS file -->
+	<link rel="stylesheet" href="css/css2/magnific-popup.css"> 
+	
+	<script src="js/js2/modernizr-2.6.2.min.js"></script>  <!-- Modernizr /-->
+	
+	 <!-- JavaScript -->
+	 <script src="js/js2/jquery-1.10.2.js"></script>
+	 <script src="js/js2/bootstrap.js"></script>
+	 <script src="js/js2/owl.carousel.js"></script>
+	 <script src="js/js2/script.js"></script>
+	 <!-- StikyMenu -->
+	 <script src="js/js2/stickUp.min.js"></script>
+	 <script type="text/javascript">
+	   jQuery(function($) {
+		 $(document).ready( function() {
+		   $('.navbar-default').stickUp();
+		   
+		 });
+	   });
+	 
+	 </script>
+	 <!-- Smoothscroll -->
+	 <script type="text/javascript" src="js/js2/jquery.corner.js"></script> 
+	 <script src="js/js2/wow.min.js"></script>
+	 <script>
+	  new WOW().init();
+	 </script>
+	 <script src="js/js2/classie.js"></script>
+	 <script src="js/js2/uiMorphingButton_inflow.js"></script>
+	 <!-- Magnific Popup core JS file -->
+	 <script src="js/js2/jquery.magnific-popup.js"></script> 
+	   <!-- Graphs -->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+	 <script src="https://code.highcharts.com/highcharts.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+	 
+	<!--table select格式-->
+	<style type="text/css">
+        table{ border-collapse:collapse;  
+				text-align: left;
+				align-self: center;
+				}
+				table th, td {padding: 8px 25px;}
+
+			select{
+                margin-top:28px;
+                background: rgba(0,0,0,0);
+                width: 120px;
+                height: 40px;
+                font-family: "微软雅黑";
+                font-size: 18px;
+                border: 2px #3f4142 solid;
+                border-radius: 5px;
+            }
+            .select-head{
+                overflow: hidden;
+                width: 249px;
+                height: 40px;
+                box-sizing: border-box;
+                padding: 0 10px;
+                line-height: 40px;
+            }
+            .select-head .select-head-cont{
+                float: left;
+            }
+            .select-head .select-icon{
+                float: right;
+            }
+            .option{
+                text-indent: 10px;
+                margin-top: 1px;
+                width: 249px;
+                color: black;
+                background: rgba(236,111,111,0.1);
+                line-height: 25px;
+                border: 1px #cfcfcf solid;
+                display: none;
+				
+            }
+            .option-item:hover{
+                background: rgba(204,106,67,0.3);
+            }
+	</style>
+	
+		
+</head>
+
+<body id="home">
+
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="status"></div>
+	</div>
+	
+	<!-- FullScreen -->
+    <div class="intro-header">
+		<div class="col-xs-12 text-center abcen1">
+			<h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">小天使大健康平台</h1>
+			<br>
+			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">关注您的健康</h3>
+		</div>
+		<div class="col-xs-12 text-center abcen wow fadeIn">
+			<div class="button_down "> 
+				<a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#state"> <img class="img_scroll" src="img/icon/circle.png" alt=""> </a>
+			</div>
+		</div>
+    </div>
+	
+	<!-- NavBar-->
+	<nav class="navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#home">小天使</a>
+			</div>
+
+			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li class="menuItem"><a href="#state">状态</a></li>
+					<li class="menuItem"><a href="#analysis">分析</a></li>
+					<li class="menuItem"><a href="#case">病例</a></li>
+					<li class="menuItem"><a href="#shop">在线商城</a></li>
+					<li class="menuItem"><a href="#my">我的</a></li>
+					<li class="menuItem"><a href="#about">关于我们</a></li>
+				</ul>
+			</div>
+		   
+		</div>
+	</nav> 
+	
+	<!-- 状态 -->
+	<div id="state" class="content-section-b" style="border-top: 0">
+		<style>
+			input{
+				border: 0px;
+				outline:none;
+				cursor: pointer; 
+				text-align:center;
+			}
+		</style>
+		<div class="container">
+
+			<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+				<h2>状态</h2>
+				<p class="lead" style="margin-top:0">实时健康</p>
+			</div>
+			
+			<form action="">
+				<div class="row">
+					<div class="col-sm-4 wow fadeInDown text-center">
+						<img class="rotate" src="img/icon/heart.svg" alt="Generic placeholder image">
+						<h3>心率</h3>
+						<input id="rate" class="lead" value="78/min" name="rate" readonly> 
+					</div><!-- /.col-lg-4 -->
+					
+					<div class="col-sm-4 wow fadeInDown text-center">
+						<img  class="rotate" src="img/icon/map.svg" alt="Generic placeholder image">
+						<h3>步数</h3>
+						<input id="step" class="lead" value="7890" name="step" readonly>
+					</div><!-- /.col-lg-4 -->
+					
+					<div class="col-sm-4 wow fadeInDown text-center">
+						<img  class="rotate" src="img/icon/clock.png" alt="Generic placeholder image" >
+						<h3>清醒时间</h3>
+						<input id="awake" class="lead" value="8.5Hour" name = "awake" readonly>
+					</div><!-- /.col-lg-4 -->
+				</div><!-- /.row -->
+				
+				<div class="row tworow">
+					<div class="col-sm-4  wow fadeInDown text-center">
+						<img class="rotate" src="img/icon/sleep2.png" alt="Generic placeholder image">
+						<h3>深度睡眠</h3>
+						<input id="deep" class="lead" value="3Hour" name="deep" readonly>
+					</div><!-- /.col-lg-4 -->
+					
+					<div class="col-sm-4 wow fadeInDown text-center">
+						<input type="image" name="name" value ="submit" class="rotate" src="img/icon/upload.png" alt="Generic placeholder image">
+						<h3>上传数据</h3>
+					</div><!-- /.col-lg-4 -->
+					
+					<div class="col-sm-4 wow fadeInDown text-center">
+						<img  class="rotate" src="img/icon/sleep1.png" alt="Generic placeholder image">
+						<h3>浅度睡眠</h3>
+						<input id="shallow" class="lead" value="5.5Hour" name="shallow" readonly>
+					</div><!-- /.col-lg-4 -->
+				</div><!-- /.row -->
+			</form>
+
+		</div>
+	</div>
+	
+	<!-- 分析 -->
+	<div id ="analysis" class="content-section-a">
+		<!--步数-->
+        <div class="container">
+			<div class="row">
+				<!--图-->
+				<div class="col-sm-6 pull-right wow fadeInRightBig">
+					<canvas class="my-4 w-100" id="step7Chart" width="900" height="580"></canvas>
+				</div>	
+          		<div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">
+					<div class="row">
+						<div class="col-md-4">
+							<h3 class="section-heading">步数</h3>
+						</div>
+					</div> 
+
+					<!--描述-->
+					
+
+					<p class="lead">
+							A daily target of 10,000 steps was first proposed. The target has been recommended
+							by the US Surgeon General and by the UK Department of Health. The main criticisms
+							of setting a universal target are that it is not achievable for older persons with
+							mobility problems or people with chronic diseases, but on the other hand, the target
+							is probably too low for children.
+					</p>
+				</div>   
+			</div>
+			<div class = "row">
+				<div class="col-sm-12 pull-right wow fadeInRightBig">
+					<p class="lead">30天</p>
+					<canvas class="my-4 w-100" id="step30Chart" width="900" height="280"></canvas>
+				</div>
+			</div>
+      	</div>
+        
+		<!--心率-->
+		<div class="content-section-b"> 
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 wow fadeInLeftBig">
+						<canvas class="my-4 w-100" id="rate7Chart" width="900" height="580"></canvas>  
+					</div>
+					
+					<div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">   
+						<div class="row">
+							<div class="col-md-4">
+								<h3 class="section-heading">心率</h3>
+						</div>				   
+						</div> 
+						
+						<div class="sub-title lead3">Heart rate is the speed of the heartbeat measured by the number 
+							<br>of contractions (beats) of the heart per minute (bpm). 
+						</div>
+
+						<p class="lead">
+							The heart rate can vary according to the body's physical needs, 
+							including the need to absorb oxygen and excrete carbon dioxide. 
+							It is usually equal or close to the pulse measured at any peripheral point. 
+							Activities that can provoke change include physical exercise, sleep, anxiety, stress,
+							illness, and ingestion of drugs.
+						</p>
+					</div>  			
+				</div>
+				<div class = "row">
+					<div class="col-sm-12 pull-right wow fadeInRightBig">
+						<p class="lead">30天</p>
+						<canvas class="my-4 w-100" id="rate30Chart" width="900" height="280"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 睡眠时间 -->
+		<div class="content-section-a">
+			<div class="container">
+				<div class="row">
+					<!--graph-->
+					<div class="col-sm-6 pull-right wow fadeInRightBig">	
+						<canvas class="my-4 w-100" id="sleep7chart" width="900" height="580"></canvas>          
+					</div>
+				 
+					<div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
+						<div class="row">
+							<div class="col-md-4">
+								<h3 class="section-heading">睡眠时间</h3>
+						</div>
+					</div> 
+
+						<p class="lead">Sleep is a naturally recurring state of mind and body,
+							characterized by altered consciousness, relatively inhibited sensory activity,
+							inhibition of nearly all voluntary muscles, and reduced interactions with surroundings.
+						</p>
+						
+						<ul class="descp lead2">
+							<li><i class="glyphicon glyphicon-time"></i>  Circadian Clock</li>
+							<li><i class="glyphicon glyphicon-refresh"></i> Sleep-wake Homeostasis</li>
+						</ul>
+
+					</div>           
+				</div>
+
+				<div class="row">
+						<!--graph-->
+						<div class="col-sm-12 pull-right wow fadeInRightBig">	
+							<canvas class="my-4 w-100" id="sleep30chart" width="900" height="280"></canvas>          
+						</div>      
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 病例 -->
+	<div id="case" class="content-section-b">
+        
+		<!---->
+		<div  class="content-section-c ">
+			<div class="container">
+				<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center wrap_title white">
+						<h2>病  例</h2>
+						<br>
+					
+					<!--病例表格-->
+					<div>
+						<table style="text-align:center">
+							<thead>
+									<tr>
+										<th>时间</th>
+										<th>医院</th>
+										<th>病名</th>
+										<th>医生</th>
+									</tr>
+								</thead>
+								<tbody id="tab"  style="text-align:center">
+									<tr>
+										<td>2018/08/17</td>
+										<td>明基医院</td>
+										<td>阑尾炎</td>
+										<td>张智涛</td>
+									</tr>
+									<tr>
+										<td>2018/01/23</td>
+										<td>明基医院</td>
+										<td>腰肌劳损</td>
+										<td>王奕盛</td>
+									</tr>
+								</tbody>
+						</table>
+					</div>
+				</div>
+				<!--More Info按钮-->
+				<div class="col-md-6 col-md-offset-3 text-center wrap_title white">
+					<div>
+					<form>
+					<a class="btn btn-embossed btn-info" href="../病例&交易记录/case.html" role="button">More Info</a>
+					</div>
+				</div>
+				
+
+				<!--不能删但没啥用-->
+				<div class="mockup-content">			
+						<div class="morph-button wow pulse morph-button-inflow morph-button-inflow-1">
+							<button type="button "></button>
+						</div>
+				</div>
+
+				</div>	
+			</div>
+		</div>	
+	</div>
+
+	<!-- 在线商城 -->
+	<div id="shop" class="content-section-a">
+		<div class="container">
+			<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+						<h2>在线商城</h2>
+					 </div>
+
+					<div class="row wow bounceInUp" >
+							<div id="owl-demo" class="owl-carousel">
+							  
+							  <a href="img/slide/1.png" class="image-link">
+								  <div class="item">
+									  <img  class="img-responsive img-rounded" src="img/slide/1.png" alt="Owl Image">
+									  <div class="am-slider-desc">保温杯 120LAB</div>
+								  </div>
+							  </a>
+							  
+							 <a href="img/slide/2.png" class="image-link">
+								  <div class="item">
+									  <img  class="img-responsive img-rounded" src="img/slide/2.png" alt="Owl Image">
+									  <div class="am-slider-desc" >体检 200LAB</div>
+								  </div>
+							  </a>
+
+
+							  <a href="img/slide/1.png" class="image-link">
+								<div class="item">
+									<img  class="img-responsive img-rounded" src="img/slide/1.png" alt="Owl Image">
+									<div class="am-slider-desc">保温杯 120LAB</div>
+								</div>
+							</a>
+
+							</div>       
+						</div>
+				</div>
+		</div>
+	</div>
+	
+	<!-- 我的 -->
+	<div id="my" class="content-section-a">
+			<div class="container">
+					<div class="row">
+					
+					<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+						<h2 id="username"></h2>
+					 </div>
+					 
+						<div class="col-sm-6  block wow bounceIn">
+							<div class="row">
+								<div class="col-md-4 box-icon rotate"> 
+									<i class="fa fa-money fa-4x "> </i> 
+								</div>
+								<div class="col-md-8 box-ct">
+									<h3> 余额 </h3>
+									<p id = "balance"> </p>
+								</div>
+						  </div>
+					  </div>
+					  <div class="col-sm-6 block wow bounceIn">
+							<div class="row">
+							  <div class="col-md-4 box-icon rotate"> 
+								<i class="fa fa-picture-o fa-4x "> </i> 
+							  </div>
+							  <div class="col-md-8 box-ct">
+								<h3> 身高&体重 </h3>
+								<p id = "Ht_Wt"> </p>
+							  </div>
+							</div>
+					  </div>
+				  </div>
+				  
+				  <div class="row tworow">
+						<div class="col-sm-6  block wow bounceIn">
+							<div class="row">
+								<div class="col-md-4 box-icon rotate"> 
+									<i class="fa fa-magic fa-4x "> </i> 
+								</div>
+								<div class="col-md-8 box-ct">
+									<h3> 年龄&性别 </h3>
+									<p id = "age"></p>
+								</div>
+						  </div>
+					  </div>
+					  <div class="col-sm-6 block wow bounceIn">
+							<div class="row">
+							  <div class="col-md-4 box-icon rotate"> 
+								
+								<i class="fa fa-heart fa-4x"> </i> 
+							  </div>
+							  <div class="col-md-8 box-ct">
+								<a href="../病例&交易记录/tran.html">
+								<h3> 交易记录</h3> </a>
+								<p>点击查看交易记录</p>
+							  </div>
+							</div>
+					  </div>
+				  </div>
+				</div>
+
+	</div>
+	
+	<!-- 关于我们 -->
+    <footer id = "about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+			<h3 class="footer-title">关于我们!</h3>
+			<p></p>
+          </div> <!-- /col-xs-7 -->
+
+          <div class="col-md-5">
+            <div class="footer-banner">
+              <h3 class="footer-title" >小天使大健康平台</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+   
+<!--json-->
+<script type="text/javascript">
+	$(function () {
+		 $.ajax({
+             data:{user_name:"test"},
+             url: "http://127.0.0.1:3000/ajax/init_user_info",//url
+             type: 'post',
+             async: false,
+             dataType: 'json',
+             timeout: 1000,
+             cache: "false", //成功执行方法
+		 })
+		 
+		 function LoadFunction()
+		 {
+			 
+			 //$("#list").html('加载中...');
+		 }
+		 
+		 function erryFunction(XMLHttpRequest, textStatus, errorThrown)
+		 {
+			 alert("网页访问失败");
+			 $("#list").html(XMLHttpRequest.status);
+			 $("#list").html(XMLHttpRequest.readyState);
+			 $("#list").html(textStatus);
+		 }
+
+		 function succFunction(json) 
+		 {
+			 //病例显示
+			 //console.log("success!")
+			 //var json = eval(tt); //数组
+				var usernamejson = json.username;
+				var htjson = json.height;
+				var wtjson = json.weight;
+				var balancejson = json.balance;
+				var agejson = json.age;
+				var sexjson = json.sex;
+				var casejson = json.case;
+
+				$.each(casejson, function (index, item)
+				{
+					//循环获取数据  
+					$("#tab").append("<tr><td>" + casejson[index].time +
+									"</td><td>" + casejson[index].hospital + 
+									"</td><td>" + casejson[index].illness +
+									"</td><td>" + casejson[index].doctor +
+									"</td></tr>");
+					
+				});
+				$("#balance").append(balancejson+" LAB");
+				$("#Ht_Wt").append("Ht:"+htjson+"cm<br>Wt:"+wtjson+"kg");
+				$("#age").append(agejson+"<br>"+ sexjson);
+				$("#username").append(usernamejson);
+
+				//图-心率
+				var _rate = json.rate;
+				//30天
+				var ctx = document.getElementById("rate30Chart");
+				var rate30Chart = new Chart(ctx, {
+				type: 'line',
+				data: {
+					labels: ["第一天", "第二天", "第三天", "第四天", "第五天", "第六天","第七天","第八天", "第九天", "第十天", "第十一天", "第十二天", "第十三天","第十四天","第十五天", "第十六天", "第十七天", "第十八天", "第十九天", "第二十天","第二十一天","第二十二天", "第二十三天", "第二十四天", "第二十五天", "第二十六天", "第二十七天","第二十八天","第二十九天", "第三十天"],
+					datasets: [{
+					data:[_rate[29],_rate[28],_rate[27],_rate[26],_rate[25],_rate[24],_rate[23],_rate[22],_rate[21],_rate[20],_rate[19],_rate[18],_rate[17],_rate[16],_rate[15],_rate[14],_rate[13],_rate[12],_rate[11],_rate[10],_rate[9],_rate[8],_rate[7],_rate[6],_rate[5],_rate[4],_rate[3],_rate[2],_rate[1],_rate[0]],
+					lineTension: 0,
+					backgroundColor: 'transparent',
+					borderColor: '#007bff',
+					borderWidth: 4,
+					pointBackgroundColor: '#007bff'
+					}]
+				},
+				options: {
+					scales: {
+					yAxes: [{
+						ticks: {
+						beginAtZero: false
+						}
+					}]
+					},
+					legend: {
+					display: false,
+					}
+				}
+			});
+				//7天
+				var ctxx = document.getElementById("rate7Chart");
+				var rate7Chart = new Chart(ctxx, {
+				type: 'line',
+				data: {
+					labels: ["第一天", "第二天", "第三天", "第四天", "第五天", "第六天","第七天"],
+					datasets: [{
+					data:[_rate[6],_rate[5],_rate[4],_rate[3],_rate[2],_rate[1],_rate[0]],
+					lineTension: 0,
+					backgroundColor: 'transparent',
+					borderColor: '#007bff',
+					borderWidth: 4,
+					pointBackgroundColor: '#007bff'
+					}]
+				},
+				options: {
+					scales: {
+					yAxes: [{
+						ticks: {
+						beginAtZero: false
+						}
+					}]
+					},
+					legend: {
+					display: false,
+					}
+				}
+			});
+
+				//图-步数
+				var _step = json.step;
+				//30天
+				var ctxxx = document.getElementById("step30Chart");
+				var myChart = new Chart(ctxxx, {
+					type: 'line',
+					data: {
+						labels: ["第一天", "第二天", "第三天", "第四天", "第五天", "第六天","第七天","第八天", "第九天", "第十天", "第十一天", "第十二天", "第十三天","第十四天","第十五天", "第十六天", "第十七天", "第十八天", "第十九天", "第二十天","第二十一天","第二十二天", "第二十三天", "第二十四天", "第二十五天", "第二十六天", "第二十七天","第二十八天","第二十九天", "第三十天"],
+						datasets: [{
+						data:[_step[29],_step[28],_step[27],_step[26],_step[25],_step[24],_step[23],_step[22],_step[21],_step[20],_step[19],_step[18],_step[17],_step[16],_step[15],_step[14],_step[13],_step[12],_step[11],_step[10],_step[9],_step[8],_step[7],_step[6],_step[5],_step[4],_step[3],_step[2],_step[1],_step[0]],
+						lineTension: 0,
+						backgroundColor: 'transparent',
+						borderColor: '#007bff',
+						borderWidth: 4,
+						pointBackgroundColor: '#007bff'
+						}]
+					},
+					options: {
+						scales: {
+						yAxes: [{
+							ticks: {
+							beginAtZero: false
+							}
+						}]
+						},
+						legend: {
+						display: false,
+						}
+					}
+				});
+				//7天
+				var ctxxxx = document.getElementById("step7Chart");
+				var myChart = new Chart(ctxxxx, {
+					type: 'line',
+					data: {
+						labels: ["第一天", "第二天", "第三天", "第四天", "第五天", "第六天","第七天"],
+						datasets: [{
+						data:[_step[6],_step[5],_step[4],_step[3],_step[2],_step[1],_step[0]],
+						lineTension: 0,
+						backgroundColor: 'transparent',
+						borderColor: '#007bff',
+						borderWidth: 4,
+						pointBackgroundColor: '#007bff'
+						}]
+					},
+					options: {
+						scales: {
+						yAxes: [{
+							ticks: {
+							beginAtZero: false
+							}
+						}]
+						},
+						legend: {
+						display: false,
+						}
+					}
+				});
+				
+				//图-睡眠
+				var _deep = json.deep;
+				var _shallow = json.shallow;
+				var _awake = json.awake;
+
+
+//30
+var barChartData30 = {
+			labels: ['第一天', '第二天', '第三天', '第四天', '第五天', '第六天', '第七天','第八天', '第九天', '第十天', '第十一天', '第十二天', '第十三天', '第十四天','第十五天', '第十六天', '第十七天', '第十八天', '第十九天', '第二十天', '第二十一天','第二十二天', '第二十三天', '第二十四天',  '第二十五天', '第二十六天', '第二十七天','第二十八天','第二十九天','第三十天'],
+			datasets: [
+				{
+					label: '清醒',
+					backgroundColor: "rgba(150,207,172)",
+					data: [_awake[29],_awake[28],_awake[27],_awake[26],_awake[25],_awake[24],_awake[23],_awake[22],_awake[21],_awake[20],_awake[19],_awake[18],_awake[17],_awake[16],_awake[15],_awake[14],_awake[13],_awake[12],_awake[11],_awake[10],_awake[9],_awake[8],_awake[7],_awake[6],_awake[5],_awake[4],_awake[3],_awake[2],_awake[1],_awake[0]]
+				}, 
+				{
+					label: '浅度睡眠',
+					backgroundColor: "rgba(251,219,187)",
+					data: [_shallow[29],_shallow[28],_shallow[27],_shallow[26],_shallow[25],_shallow[24],_shallow[23],_shallow[22],_shallow[21],_shallow[20],_shallow[19],_shallow[18],_shallow[17],_shallow[16],_shallow[15],_shallow[14],_shallow[13],_shallow[12],_shallow[11],_shallow[10],_shallow[9],_shallow[8],_shallow[7],_shallow[6],_shallow[5],_shallow[4],_shallow[3],_shallow[2],_shallow[1],_shallow[0]]
+				},
+				{
+				label: '深度睡眠',
+				backgroundColor: "rgba(237,181,180)",
+				data: [_deep[29],_deep[28],_deep[27],_deep[26],_deep[25],_deep[24],_deep[23],_deep[22],_deep[21],_deep[20],_deep[19],_deep[18],_deep[17],_deep[16],_deep[15],_deep[14],_deep[13],_deep[12],_deep[11],_deep[10],_deep[9],_deep[8],_deep[7],_deep[6],_deep[5],_deep[4],_deep[3],_deep[2],_deep[1],_deep[0]]
+			}]
+
+		};
+				//7天
+				var barChartData = {
+					labels: ['第一天', '第二天', '第三天', '第四天', '第五天', '第六天', '第七天'],
+					datasets: [
+						{
+							label: '清醒',
+							backgroundColor: "rgba(150,207,172)",
+							data: [_awake[6],_awake[5],_awake[4],_awake[3],_awake[2],_awake[1],_awake[0]]
+						}, 
+						{
+							label: '浅度睡眠',
+							backgroundColor: "rgba(251,219,187)",
+							data: [_shallow[6],_shallow[5],_shallow[4],_shallow[3],_shallow[2],_shallow[1],_shallow[0]]
+						},
+						{
+							label: '深度睡眠',
+							backgroundColor: "rgba(237,181,180)",
+							data: [_deep[6],_deep[5],_deep[4],_deep[3],_deep[2],_deep[1],_deep[0]]
+					}]
+				};
+				window.onload = function() {
+				var sleep7chartctx = document.getElementById('sleep7chart').getContext('2d');
+				window.myBar = new Chart(sleep7chartctx, {
+					type: 'bar',
+					data: barChartData,
+					options: {
+						title: {display: true,},
+						tooltips: {
+							mode: 'index',
+							intersect: false
+						},
+						responsive: true,
+						scales: {
+							xAxes: [{stacked: true,}],
+							yAxes: [{stacked: true}]
+						}
+					}
+				});
+				var sleep30chartctx = document.getElementById('sleep30chart').getContext('2d');
+			window.myBar30 = new Chart(sleep30chartctx, {
+				type: 'bar',
+				data: barChartData30,
+				options: {
+					title: {
+						display: true,
+						//text: 'Chart.js Bar Chart - Stacked'
+					},
+					tooltips: {
+						mode: 'index',
+						intersect: false
+					},
+					responsive: true,
+					scales: {
+						xAxes: [{
+							stacked: true,
+						}],
+						yAxes: [{
+							stacked: true
+						}]
+					}
+				}
+			});
+			};
+			};
+		});
+</script>
+
+	
+</body>
+
+</html>

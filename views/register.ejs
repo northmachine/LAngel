@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>小天使 - Sign Up</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/css1/font-awesome.min.css">
+    <link rel="stylesheet" href="css/css1/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/css1/demo.css" />
+    <link rel="stylesheet" href="css/css1/templatemo-style.css">
+
+    <script type="text/javascript" src="js/js1/modernizr.custom.86080.js"></script>
+    <script type="text/javascript">
+        if(document.getElementById("psw").value != document.getElementById("cpsw").value)
+        {
+            alert("两次密码输入不一致");
+        }
+    </script>
+</head>
+
+<body>
+<div id="particles-js"></div>
+
+<ul class="cb-slideshow">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<div class="container-fluid">
+    <div class="row cb-slideshow-text-container ">
+        <div class= "tm-content col-xl-10 col-sm-8 col-xs-8 ml-auto section">
+            <header class="mb-5"><h1>Sign Up</h1></header>
+            <P class="mb-5">Create your account</P>
+            <form action="#" method="post" class="subscribe-form">
+                <div class="row form-section">
+
+                    <div class="col-md-10 col-sm-10 col-xs-10">
+                        <input name="user_name" type="text" class="form-control" id="contact_uname" placeholder="用户名" required/>
+                        <br>
+                    </div>
+
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <input name="password" type="psw" class="form-control" id="psw" placeholder="密码" required/>
+                        <br>
+                    </div>
+
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <input name="Cpassword" type="cpsw" class="form-control" id="cpsw" placeholder="确认密码" required/>
+                        <br>
+                    </div>
+
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <input name="height" type="text" class="form-control" id="contact_height" placeholder="身高(cm)  例：183" required/>
+                        <br>
+                    </div>
+
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <input name="weight" type="text" class="form-control" id="contact_weight" placeholder="体重(kg)  例：79" required/>
+                        <br>
+                    </div>
+
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <input name="sex" type="text" class="form-control" id="contact_sex" placeholder="性别（男/女）" required/>
+                        <br>
+                    </div>
+
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <input name="age" type="text" class="form-control" id="contact_age" placeholder="年龄  例：36" required/>
+                        <br>
+                    </div>
+
+                    <div class="col-md-7 col-sm-7 col-xs-7">
+                        <button type="submit" class="tm-btn-subscribe" onclick="return validateLogin()">Submit</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script language="javascript">
+    function validateLogin(){
+        console.log(111);
+        var sUserName = document.getElementById("contact_uname").value;
+        var sPassword = document.getElementById("psw").value;
+        var sConfirmPassword = document.getElementById("cpsw").value;
+        var sHeight = document.getElementById("contact_height").value;
+        var sWeight = document.getElementById("contact_weight").value;
+        var sSex = document.getElementById("contact_sex").value;
+        var sAge = document.getElementById("contact_age").value;
+
+        var usern = /^[a-zA-Z0-9_]{1,}$/;
+        var number =/^[0-9]{1,}$/;
+        if ((sUserName =="") ){
+            alert("用户名不可为空!");
+            return false ;
+        }
+        if((sUserName.length <= 8))
+        {
+            alert("用户名须大于8位!");
+            return false ;
+        }
+        if(!sUserName.match(usern)){
+            alert("输入用户名不合法！用户名只可由数字、字母、下划线组成!");
+            return false ;
+        }
+
+
+
+
+        if ((sPassword =="") ){
+            alert("密码不可为空!");
+            return false ;
+        }
+        if((sPassword.length <= 8))
+        {
+            alert("密码须大于8位!");
+            return false ;
+        }
+        if(!sPassword.match(usern)){
+            alert("输入密码不合法！密码只可由数字、字母、下划线组成!");
+            return false ;
+        }
+
+
+
+        if(sPassword != sConfirmPassword)
+        {
+            alert("前后输入的密码不一致!");
+            return false ;
+        }
+
+
+
+
+        if ((sHeight =="") ){
+            alert("身高项不可为空!");
+            return false ;
+        }
+        if((sHeight<=100) || (sHeight>=300)||(!sHeight.match(number))){
+            alert("输入身高非法！");
+            return false ;
+        }
+
+        if ((sWeight =="") ){
+            alert("体重项不可为空!");
+            return false ;
+        }
+        if((sWeight<=1) || (sWeight>=200) || (!sWeight.match(number))){
+            alert("输入体重非法!");
+            return false ;
+        }
+
+        if ((sSex =="") ){
+            alert("性别项不可为空!");
+            return false ;
+        }
+        if((sSex!="male")&&(sSex!="female")){
+            alert("请输入male/female！");
+            return false ;
+        }
+
+        if ((sAge =="") ){
+            alert("年龄项不可为空!");
+            return false ;
+        }
+        if((sAge<=0) || (sAge>200) || (!sAge.match(number))){
+            alert("输入年龄非法！");
+            return false ;
+        }
+
+    }
+</script>
+</body>
+
+<script type="text/javascript" src="js/js1/particles.js"></script>
+<script type="text/javascript" src="js/js1/app.js"></script>
+
+</html>

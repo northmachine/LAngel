@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>LAngle | 病例</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="css/style_1.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script>
+        $(function() {
+            $( "#accordion" ).accordion({
+                collapsible: true
+            });
+        });
+    </script>
+
+
+</head>
+
+<body class="landing">
+<!-- Main -->
+<section id="main" class="container">
+    <!--headline-->
+    <section class="box special">
+        <span class="image featured"><img src="images/case.jpg" alt="" /></span>
+        <header class="major">
+            <h2>病例信息</h2>
+        </header>
+    </section>
+
+    <!-- Accordion -->
+    <div id="accordion">
+        <!--1-->
+        <h3><label id="illness_1" name="illness_1" value ="ill">腰肌劳损</label>
+            <label id="time_1" name="time_1">2018/03/26</label>
+        </h3>
+        <div><label id="hospital_1" name="hospital_1">明基医院</label>
+            <label id="doctor_1" name="doctor_1">张智涛</label><br>
+            <label id="symptom_1" name="symptom_1">慢性疼痛，且多无明显诱发因素。
+                疼痛发作时患者常感到腰部又酸又胀，休息片刻后能够得到缓解。若卧床太久，
+                又会感觉不舒服，稍微活动之后反而有所好转，但活动过久则又加重疼痛</label><br>
+            <label id="cure_1" name="cure_1">布洛芬
+            </label>
+        </div>
+        <!--2-->
+        <h3><label id="illness_2" name="illness_2">腰肌劳损</label>
+            <label id="time_2" name="time_2">2018/08/16</label>
+        </h3>
+        <div><label id="hospital_2" name="hospital_2">明基医院</label>
+            <label id="doctor_2" name="doctor_2">张智涛</label><br>
+            <label id="symptom_2" name="symptom_2">慢性疼痛，且多无明显诱发因素。
+                疼痛发作时患者常感到腰部又酸又胀，休息片刻后能够得到缓解。若卧床太久，
+                又会感觉不舒服，稍微活动之后反而有所好转，但活动过久则又加重疼痛</label><br>
+            <label id="cure_2" name="cure_2">布洛芬
+            </label>
+        </div>
+        <!--3-->
+        <h3><label id="illness_3" name="illness_3">腰肌劳损</label>
+            <label id="time_3" name="time_3">2018/08/16</label>
+        </h3>
+        <div><label id="hospital_3" name="hospital_3">明基医院</label>
+            <label id="doctor_3" name="doctor_3">张智涛</label><br>
+            <label id="symptom_3" name="symptom_3">慢性疼痛，且多无明显诱发因素。
+                疼痛发作时患者常感到腰部又酸又胀，休息片刻后能够得到缓解。若卧床太久，
+                又会感觉不舒服，稍微活动之后反而有所好转，但活动过久则又加重疼痛</label><br>
+            <label id="cure_3" name="cure_3">布洛芬
+            </label>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <a href="/users" class="btn btn-default">返回主页</a>
+        <ul class="copyright">
+            <li>&copy; 小天使大健康平台 All rights reserved.</li>
+        </ul>
+    </footer>
+</section>>
+
+<script type="text/javascript" >
+    $(function () {
+        $.ajax({
+            url: "/ajax/medicalRecords",
+            type: 'post',
+            data:{user_name:"<%=user_name%>"},
+            //data: JSON.stringify(dataModel.dataSource()),
+            async: false,
+            dataType: 'json',
+            timeout: 1000,
+            cache: "false",
+            beforeSend: LoadFunction, //加载执行方法
+            error: erryFunction,  //错误执行方法
+            success: succFunction//成功执行方法
+        })
+
+        function LoadFunction()
+        {
+            //$("#list").html('加载中...');
+        }
+
+        function erryFunction(XMLHttpRequest, textStatus, errorThrown)
+        {
+            $("#list").html(XMLHttpRequest.status);
+            $("#list").html(XMLHttpRequest.readyState);
+            $("#list").html(textStatus);
+        }
+
+        function succFunction(tt)
+        {
+            //var json = eval(tt); //数组
+            //var s = "";
+            var json = tt.case;
+            //alert(json.length);
+            $.each(json, function (index, item)
+            {
+                //循环获取数据
+                var _illness = json[index].illness;
+                var _time = json[index].time;
+                var _doctor = json[index].doctor;
+                var _symptom = json[index].symptom;
+                var _cure = json[index].cure;
+                var _hospital = json[index].hospital
+                /*$("#accordion").append( "<h3><label>"+_illness+"</label><label>"+_time+"</label></h3>"+
+                    "<div><label>"+_hospital+"</label><label>"+_doctor+"</label><br><label>"+_symptom+
+                    "</label><br><label>"+_cure+"</label></div>");*/
+                $("#accordion").append('<h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><label id="illness_2" name="illness_2">'
+                    +_illness+'</label><label id="time_2" name="time_2">'+_time+'</label></h3>');
+                $("#accordion").append('<div style="display: block; height: 125px;" class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content ui-accordion-content-active" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="false"><label id="hospital_2" name="hospital_2">'
+                    +_hospital+'</label><label id="doctor_2" name="doctor_2">'+_doctor+'</label><br><label id="symptom_2" name="symptom_2">'+_symptom+'</label><br><label id="cure_2" name="cure_2">'+_cure+'</label></div>');
+            });
+            $("#accordion").accordion("refresh");
+            //$(time_1).append(json[0].time);
+        };
+    });
+</script>
+
+</body>
+</html>

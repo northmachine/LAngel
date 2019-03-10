@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>LAngle | 购买记录</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="css/style_1.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/jquery.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://static.runoob.com/assets/qrcode/qrcode.min.js"></script>
+</head>
+<body class="landing" >
+<!-- Main -->
+<section id="main" class="container">
+
+    <!--图片&标题-->
+    <section class="box special">
+        <span class="image featured"><img src="./images/transaction.png" alt="" /></span>
+        <header class="major">
+            <h2>购买记录</h2>
+        </header>
+    </section>
+
+    <!--表格-->
+    <table >
+        <thead>
+        <tr>
+            <th>日期</th>
+            <th>物品</th>
+            <th>使用情况</th>
+            <th>二维码</th>
+
+        </tr>
+        </thead >
+
+        <tbody id="tab">
+
+        <tr>
+            <td>2018/08/15</td>
+            <td>100代金券</td>
+            <td>未使用</td>
+            <td id="qrid-1"></td>
+        </tr>
+
+
+        <tr>
+            <td>2018/06/11</td>
+            <td>眼部检查</td>
+            <td>已使用</td>
+            <td id="qrid-2"></td>
+        </tr>
+
+        <tr>
+            <td>2018/04/20</td>
+            <td>200代金券</td>
+            <td>已使用</td>
+            <td id="qrid-3"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <a href="/users" class="btn btn-default">返回主页</a>
+        <ul class="copyright">
+            <li>&copy;小天使大健康平台 All rights reserved.</li>
+        </ul>
+    </footer>
+
+    <script>
+        console.log("4");
+        var qrcode = new QRCode(document.getElementById("qrid-2"),
+            {
+                width : 40,
+                height : 40
+            });
+        console.log("5");
+        qrcode.makeCode("hjkyuoiu");
+        console.log("7");
+
+        var qrcode1 = new QRCode(document.getElementById("qrid-1"), {
+            width : 40,
+            height : 40
+        });
+        console.log("6");
+        qrcode1.makeCode("hjkfdsls");
+        console.log("8");
+
+        var qrcode1 = new QRCode(document.getElementById("qrid-3"), {
+            width : 40,
+            height : 40
+        });
+        console.log("6");
+        qrcode1.makeCode("kjlsdfjas");
+    </script>
+
+</body>
+</html>

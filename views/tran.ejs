@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<title>LAngle | 交易记录</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link href="css/style_1.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/jquery.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body class="landing" >
+<!-- Main -->
+<section id="main" class="container">
+
+	<!--图片&标题-->
+	<section class="box special">
+		<span class="image featured"><img src="./images/transaction.png" alt="" /></span>
+		<header class="major">
+			<h2>交易记录</h2>
+		</header>
+	</section>
+
+	<!--表格-->
+	<table >
+		<thead>
+		<tr>
+			<th>日期</th>
+			<th>交易方</th>
+			<th>收入（LAB）</th>
+			<th>支出（LAB）</th>
+			<th>余额（LAB）</th>
+		</tr>
+		</thead >
+
+		<tbody id="tab">
+
+		<tr>
+			<td>2018/06/15</td>
+			<td>九龙医院</td>
+			<td>80</td>
+			<td>/</td>
+			<td>1120</td>
+		</tr>
+
+		<tr>
+			<td>2018/06/20</td>
+			<td>提现</td>
+			<td>/</td>
+			<td>1000</td>
+			<td>200</td>
+		</tr>
+
+		</tbody>
+	</table>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<a href="/users" class="btn btn-default">返回主页</a>
+		<ul class="copyright">
+			<li>&copy;小天使大健康平台 All rights reserved.</li>
+		</ul>
+	</footer>
+
+	<script type="text/javascript">
+        $(function () {
+            $.ajax({
+                url: "/ajax/txInfo",
+                type: 'post',
+                data:{user_name:"<%=user_name%>"},
+                //data: JSON.stringify(dataModel.dataSource()),
+                async: false,
+                dataType: 'json',
+                timeout: 1000,
+                cache: "false",
+                beforeSend: LoadFunction, //加载执行方法
+                error: erryFunction,  //错误执行方法
+                success: succFunction //成功执行方法 //成功执行方法
+            })
+
+            function LoadFunction()
+            {
+                //$("#list").html('加载中...');
+            }
+
+            function erryFunction(XMLHttpRequest, textStatus, errorThrown)
+            {
+                $("#list").html(XMLHttpRequest.status);
+                $("#list").html(XMLHttpRequest.readyState);
+                $("#list").html(textStatus);
+            }
+
+
+
+            function succFunction(tt)
+            {
+                console.log("success!")
+                //var json = eval(tt); //数组
+                var json = tt.tran;
+                var s = "";
+                $.each(json, function (index, item)
+                {
+                    //循环获取数据
+                    s = "<tr><td>" + json[index].date + "</td><td>" + json[index].info + "</td><td>" +
+                        json[index].in + "</td><td>"+json[index].out+"</td><td>"+json[index].balance+ "</td></tr>";
+                    $("#tab").append(s);
+                });
+            };
+        });
+	</script>
+</section>
+</body>
+</html>

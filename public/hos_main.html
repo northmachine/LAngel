@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>LAngle | Hospital</title>
+<!-- Custom Theme files -->
+<link href="css/style_main.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+
+<meta name="viewport" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="keywords" content="" />
+
+
+
+ <!-- Bootstrap -->
+ <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+ <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+ <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+ <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<!--header-->
+<div class="header">
+	<h1>小天使大健康平台</h1>
+</div>
+<!--搜索-->
+<div form method="post">
+	<div class="row box" >
+		<div class="col-md-6 search" style="margin-left: 17%;" >
+			<input class="" type="text" value="请输入用户ID" name="id" id="id" onfocus="this.value = '';" 
+			onblur="if (this.value == '') {this.value = '请输入用户ID';}">
+		</div>
+		<div class="col-md-1 search2"style="margin-left: 7%;" >
+			<input type="submit" name="submit" id="submit" value="搜索">
+		</div>
+	</div>
+</div>
+
+
+	<!--买卖-->
+	<div class = "buy">
+		<form method="POST" action="#" class="" >
+			<div class="row">
+				<!--左-->
+				<div class = "col-md-6">
+						<input type="text" name="id" id="subject" value="" placeholder="用户ID">
+						<input type="password" name="password" id="subject" value="" placeholder="密码">
+						<label type="text" name="cost" id="cost" value="">交易费：120 LAB</label>
+						<label type="text" name="balance" id="balance" value="">现有余额：</label>
+						<div class="btn">
+							<input type="submit" name="name" value="申请授权">
+						</div>	
+				</div>
+				<!--右-->
+				<div class = "col-md-6">
+					<h3>申请授权须知</h3>
+					<textarea disabled>
+						
+					</textarea>
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+<!--表格 通过json解析-->
+<div class="myTable" style="text-align:center">
+	<h3 style="margin-top:0;">近期授权</h3>
+	<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>用户名</th>
+			<th>性别</th>
+			<th>授权时间</th>
+		</tr>
+	</thead>
+	<tbody id="tab">
+		<!--
+		<tr>
+			<td>汪勇护</td>
+			<th>男</th>
+			<th>2019/08/20</th>
+		</tr>
+		<tr>
+			<td>李冰仁</td>
+			<th>男</th>
+			<th>2019/08/20</th>
+		</tr>
+		<tr>
+			<td>张绿</td>
+			<th>女</th>
+			<th>2019/08/20</th>
+		</tr>-->
+	</tbody>
+	</table>
+</div>
+
+
+<div class="copyright">
+	<p>Copyright &copy; 小天使大健康平台 All rights reserved.</p>
+</div>
+
+  
+<!--json-->
+<script type="text/javascript">
+	$(function () {
+		 $.ajax({
+			 url: "test_main.json",//url
+			 type: 'GET',
+			 //data: {user_name:"test"},
+			 async: false,
+			 dataType: 'json',
+			 timeout: 1000,
+			 cache: "false",
+			 beforeSend: LoadFunction, //加载执行方法  
+			 error: erryFunction,  //错误执行方法  
+			 success: succFunction //成功执行方法  
+		 })
+		 
+		 function LoadFunction()
+		 {
+			 
+			 //$("#list").html('加载中...');
+		 }
+		 
+		 function erryFunction(XMLHttpRequest, textStatus, errorThrown)
+		 {
+			 alert("网页访问失败");
+		 }
+
+		 function succFunction(json) 
+		 {
+
+				var balancejson = json.balance;
+				var usersjson = json.users;
+				
+				console.log(balancejson);
+				$.each(usersjson, function (index, item)
+				{
+					//循环获取数据  
+					$("#tab").append("<tr><td>" + usersjson[index].username +
+									"</td><td>" + usersjson[index].sex + 
+									"</td><td>" + usersjson[index].time +
+									"</td></tr>");
+					
+				});
+
+				$("#balance").append(balancejson+" LAB");
+
+			};
+		});
+</script>
+
+</body>
+</html>

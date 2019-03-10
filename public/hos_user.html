@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>LAngel - UserInfo</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="css/style_user.css" rel="stylesheet" type="text/css" media="all"/>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/jquery-ui.js"></script>
+
+		<link href="css/jquery-ui.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		
+		
+		<script>
+		$(function() {
+			$( "#accordion" ).accordion({
+			  collapsible: true
+			});
+		  });
+		</script>
+	</head>
+
+	<body style="background: url(../images/banner.jpg)repeat;">
+
+		<!-- Header -->
+		<header id="header" class="skel-layers-fixed" style="opacity:0.60">
+			<nav id="nav">
+				<ul>
+					<li><img src="./images/hospital_4.png" style="margin-left:4%"></li>
+					<li><a href="">明基医院</a></li>
+					<li><a href="#user">用户</a></li>
+					<li><a href="#data">健康数据</a></li>
+					<li><a href="#case">添加病例</a></li>
+					<li><a href="#precase">往期病例</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		
+		<!-- Main -->
+		<section id="main" class="container">
+			
+						
+			<!--用户-->
+			<div class="box row" id="user" style="background:#f8f5f5">
+				<div class="col-md-2">
+				<img src="./images/user.png" style="width:140px"></div>
+				<div class="col-md-5">
+				<label><h1 name="username" id ="username" style="font-weight:normal;color: #26292c"></h1></label><br>
+				<b style="font-weight:normal;color: #26292c">Ht：<label name="height" id ="height" style="font-weight:normal;color: #26292c"></label>cm</b>
+				<b style="font-weight:normal;color: #26292c">Wt：<label name="weight" id ="weight" style="font-weight:normal;color: #26292c"></label>kg<br></b>
+				<b style="font-weight:normal;color: #26292c">年龄：<label name="age" id ="age" style="font-weight:normal;color: #26292c"></label></b>
+				<b style="font-weight:normal;color: #26292c">性别：<label name="sex" id ="sex" style="font-weight:normal;color: #26292c"></label></b>
+			</div>
+			</div>
+
+			<!--数据-->
+			<div id="data" class="box row" style="background:#f8f5f5">
+				<div class="col-md-4" id="rate">
+					<h3>心率 </h3>
+					<canvas class="my-4 w-100" id="rate7Chart" width="900" height="580"></canvas>
+				</div>
+				<div class="col-md-4" id="step">
+					<h3>步数 </h3>
+					<canvas class="my-4 w-100" id="step7Chart" width="900" height="580"></canvas>
+				</div>
+				<div class="col-md-4" id="sleep">
+					<h3>睡眠时间 </h3>
+					<canvas class="my-4 w-100" id="sleep7Chart" width="900" height="580"></canvas>
+				</div>
+			</div>
+			
+			<!--添加病例-->
+			<div id="case" class="box row" style="background:#f8f5f5">
+				<form method="get" action="#" class="col-md-12" >
+					
+					<div class="row uniform half" >
+						<div class="12u">
+							<input type="text" name="subject" id="subject" value="" placeholder="病名" />
+						</div>
+					</div>
+					<div class="row uniform half">
+						<div class="12u">
+							<textarea name="message" id="message" placeholder="症状" rows="6"></textarea>
+						</div>
+					</div>
+					<div class="row uniform half">
+							<div class="12u">
+								<textarea name="message" id="message" placeholder="治疗" rows="6"></textarea>
+							</div>
+						</div>
+					
+					<div class="row uniform half collapse-at-2">
+							<div class="3u">
+								<input type="text" name="name" id="name" value="" placeholder="医院" />
+							</div>
+							<div class="3u">
+								<input type="text" name="email" id="email" value="" placeholder="医生" />
+							</div>
+							<div class="3u">
+								<input type="text" name="email" id="email" value="" placeholder="时间" />
+							</div>
+							<div class="3u">
+								<ul class="actions align-center">
+									<li><input type="submit" value="添加病例" /></li>
+								</ul>
+							</div>
+					</div>
+				</form>
+			</div>
+
+			<!--折叠病例-->
+			<div id="precase"class="box row" style="background:#f8f5f5">
+			<div id="accordion" >
+					<!--1-->
+					<h3><label id="illness_1" name="illness_1">腰肌劳损</label>
+						<label id="time_1" name="time_1">2018/08/16</label>
+					</h3>
+					<div><label id="hospital_1" name="hospital_1">明基医院</label>
+						<label id="doctor_1" name="doctor_1">张智涛</label><br>
+						<label id="symptom_1" name="symptom_1">慢性疼痛，且多无明显诱发因素。
+							疼痛发作时患者常感到腰部又酸又胀，休息片刻后能够得到缓解。若卧床太久，
+							又会感觉不舒服，稍微活动之后反而有所好转，但活动过久则又加重疼痛</label><br>
+						<label id="cure_1" name="cure_1">布洛芬</label>
+					</div>
+					<!--2-->
+					<h3><label id="illness_2" name="illness_2">腰肌劳损</label>
+						<label id="time_2" name="time_2">2018/08/16</label>
+					</h3>
+					<div><label id="hospital_2" name="hospital_2">明基医院</label>
+						<label id="doctor_2" name="doctor_2">张智涛</label><br>
+						<label id="symptom_2" name="symptom_2">慢性疼痛，且多无明显诱发因素。
+							疼痛发作时患者常感到腰部又酸又胀，休息片刻后能够得到缓解。若卧床太久，
+							又会感觉不舒服，稍微活动之后反而有所好转，但活动过久则又加重疼痛</label><br>
+						<label id="cure_2" name="cure_2">布洛芬
+						</label>
+					</div>
+					<!--3-->
+					<h3><label id="illness_3" name="illness_3">腰肌劳损</label>
+						<label id="time_3" name="time_3">2018/08/16</label>
+					</h3>
+					<div><label id="hospital_3" name="hospital_3">明基医院</label>
+						<label id="doctor_3" name="doctor_3">张智涛</label><br>
+						<label id="symptom_3" name="symptom_3">慢性疼痛，且多无明显诱发因素。
+							疼痛发作时患者常感到腰部又酸又胀，休息片刻后能够得到缓解。若卧床太久，
+							又会感觉不舒服，稍微活动之后反而有所好转，但活动过久则又加重疼痛</label><br>
+						<label id="cure_3" name="cure_3">布洛芬
+						</label>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+			
+		<!-- Footer -->
+		<div class="copyright" style="color:#fff;margin-bottom: 40px;">
+				Copyright &copy; 小天使大健康平台 All rights reserved.
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+
+
+		<script type="text/javascript" >
+			$(function () {
+				$.ajax({
+					url: "test_user.json",
+					type: 'GET',
+					//data: JSON.stringify(dataModel.dataSource()),
+					async: false,
+					dataType: 'json',
+					timeout: 1000,
+					cache: "false",
+					beforeSend: LoadFunction, //加载执行方法  
+					error: erryFunction,  //错误执行方法  
+					success: succFunction //成功执行方法  
+				})
+				
+				function LoadFunction()
+				{
+					//$("#list").html('加载中...');
+				}
+				
+				function erryFunction(XMLHttpRequest, textStatus, errorThrown)
+				{
+					//$("#list").html(XMLHttpRequest.status);
+					//$("#list").html(XMLHttpRequest.readyState);
+					//$("#list").html(textStatus);
+				}
+				
+				function succFunction(json)
+				{
+				    console.log(json);
+					var usernamejson = json.username;
+					var heightjson = json.height;
+					var weightjson = json.weight;
+					var agejson = json.age;
+					var sexjson = json.sex;
+					var casejson = json.case;
+
+					$("#username").append(usernamejson);
+					$("#height").append(heightjson);
+					$("#weight").append(weightjson);
+					$("#age").append(agejson);
+					$("#sex").append(sexjson);
+
+					$.each(casejson, function (index, item)
+					{
+						//循环获取数据  
+						var _illness = casejson[index].illness;
+						var _time = casejson[index].time;
+						var _doctor = casejson[index].doctor;
+						var _symptom = casejson[index].symptom;
+						var _cure = casejson[index].cure;
+						var _hospital = casejson[index].hospital
+						
+						$("#accordion").append('<h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><label id="illness_2" name="illness_2">'
+							+_illness+'</label><label id="time_2" name="time_2">'+_time+'</label></h3>');
+						$("#accordion").append('<div style="display: block; height: 125px;" class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content ui-accordion-content-active" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="false"><label id="hospital_2" name="hospital_2">'
+							+_hospital+'</label><label id="doctor_2" name="doctor_2">'+_doctor+'</label><br><label id="symptom_2" name="symptom_2">'+_symptom+'</label><br><label id="cure_2" name="cure_2">'+_cure+'</label></div>');
+					});
+					$("#accordion").accordion("refresh");
+				
+				
+				//7天心率图
+				var _rate = json.rate;
+				
+				var ctxx = document.getElementById("rate7Chart");
+				var rate7Chart = new Chart(ctxx, {
+				type: 'line',
+				data: {
+					labels: ["第一天", "第二天", "第三天", "第四天", "第五天", "第六天","第七天"],
+					datasets: [{
+					data:[_rate[6],_rate[5],_rate[4],_rate[3],_rate[2],_rate[1],_rate[0]],
+					lineTension: 0,
+					backgroundColor: 'transparent',
+					borderColor: '#007bff',
+					borderWidth: 4,
+					pointBackgroundColor: '#007bff'
+					}]
+				},
+				options: {
+					scales: {
+					yAxes: [{
+						ticks: {
+						beginAtZero: false
+						}
+					}]
+					},
+					legend: {
+					display: false,
+					}
+				}
+			});
+			
+			    
+				//7天步数图
+			    var _step = json.step;
+				
+				var ctxxxx = document.getElementById("step7Chart");
+				var myChart = new Chart(ctxxxx, {
+					type: 'line',
+					data: {
+						labels: ["第一天", "第二天", "第三天", "第四天", "第五天", "第六天","第七天"],
+						datasets: [{
+						data:[_step[6],_step[5],_step[4],_step[3],_step[2],_step[1],_step[0]],
+						lineTension: 0,
+						backgroundColor: 'transparent',
+						borderColor: '#007bff',
+						borderWidth: 4,
+						pointBackgroundColor: '#007bff'
+						}]
+					},
+					options: {
+						scales: {
+						yAxes: [{
+							ticks: {
+							beginAtZero: false
+							}
+						}]
+						},
+						legend: {
+						display: false,
+						}
+					}
+				});
+				
+				//7天图-睡眠
+				var _deep = json.deep;
+				var _shallow = json.shallow;
+				var _awake = json.awake;
+
+				
+				var barChartData = {
+					labels: ['第一天', '第二天', '第三天', '第四天', '第五天', '第六天', '第七天'],
+					datasets: [
+						{
+							label: '清醒',
+							backgroundColor: "rgba(150,207,172)",
+							data: [_awake[6],_awake[5],_awake[4],_awake[3],_awake[2],_awake[1],_awake[0]]
+						}, 
+						{
+							label: '浅度睡眠',
+							backgroundColor: "rgba(251,219,187)",
+							data: [_shallow[6],_shallow[5],_shallow[4],_shallow[3],_shallow[2],_shallow[1],_shallow[0]]
+						},
+						{
+							label: '深度睡眠',
+							backgroundColor: "rgba(237,181,180)",
+							data: [_deep[6],_deep[5],_deep[4],_deep[3],_deep[2],_deep[1],_deep[0]]
+					}]
+				};
+				window.onload = function() {
+				var sleep7chartctx = document.getElementById('sleep7Chart').getContext('2d');
+				window.myBar = new Chart(sleep7chartctx, {
+					type: 'bar',
+					data: barChartData,
+					options: {
+						title: {display: true,},
+						tooltips: {
+							mode: 'index',
+							intersect: false
+						},
+						responsive: true,
+						scales: {
+							xAxes: [{stacked: true,}],
+							yAxes: [{stacked: true}]
+						}
+					}
+				});
+				};
+				};
+			});
+
+		   </script>
+		
+	</body>
+</html>

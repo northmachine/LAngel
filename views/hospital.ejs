@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>LAngle | Hospital</title>
+    <!-- Custom Theme files -->
+    <link href="css/style_main.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- Custom Theme files -->
+
+    <meta name="viewport" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<!--header-->
+<div class="header">
+    <h1>小天使大健康平台</h1>
+</div>
+<!--搜索-->
+    <form method="post">
+        <div class="row box" >
+            <div class="col-md-6 search" style="margin-left: 17%;" >
+                <input class="" type="text" value="" name="id" id="id1" onfocus="this.value = '';" placeholder="请输入用户id">
+            </div>
+            <div class="col-md-1 search2"style="margin-left: 7%;" >
+                <input type="submit" name="submit" id="submit" value="搜索" onclick="return checkSearch()">
+            </div>
+        </div>
+    </form>
+
+
+<!--买卖-->
+<div class = "buy">
+    <form method="POST" >
+        <div class="row">
+            <!--左-->
+            <div class = "col-md-6">
+                <input type="text" name="id" id="id2" value="" placeholder="用户ID">
+                <input type="password" name="password" id="id3" value="" placeholder="密码">
+                <input type="hidden" name="hospital" id="hospital" value="<%=hos_name%>"/>
+                <label type="text" name="cost" id="cost" value="">交易费：120 LAB</label>
+                <label type="text" name="balance" id="balance" value="">现有余额：</label>
+                <div class="btn">
+                    <input type="submit" name="name" value="申请授权" onclick="return checkConfirm()">
+                </div>
+            </div>
+            <!--右-->
+            <div class = "col-md-6">
+                <h3>申请授权须知</h3>
+                <textarea disabled>
+区块链大健康平台旨在面向医院企业及个人用户提供健康信息加密、共享服务。该平台采用了对组织与用户逐级授权的管理模式，由后台人员对医院组织及用户进行逐级建立与授权。
+医院企业人员若需登陆信息平台获取更多服务，请向后台管理人员申请，若该医院无账户权限，请向项目研发团队申请。
+
+					</textarea>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<!--表格 通过json解析-->
+<div class="myTable" style="text-align:center">
+    <h3 style="margin-top:0;">近期授权</h3>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>用户名</th>
+            <th>性别</th>
+            <th>授权时间</th>
+        </tr>
+        </thead>
+        <tbody id="tab">
+        <!--
+        <tr>
+            <td>汪勇护</td>
+            <th>男</th>
+            <th>2019/08/20</th>
+        </tr>
+        <tr>
+            <td>李冰仁</td>
+            <th>男</th>
+            <th>2019/08/20</th>
+        </tr>
+        <tr>
+            <td>张绿</td>
+            <th>女</th>
+            <th>2019/08/20</th>
+        </tr>-->
+        </tbody>
+    </table>
+</div>
+
+
+<div class="copyright">
+    <p>Copyright &copy; 小天使大健康平台 All rights reserved.</p>
+</div>
+
+
+<!--json-->
+<script type="text/javascript">
+    $(function () {
+        $.ajax({
+            data:{hos_name:"<%=hos_name%>"},
+            url: "/ajax/init_hos_info",//url
+            type: 'post',
+            async: false,
+            dataType: 'json',
+            timeout: 1000,
+            cache: "false",
+            beforeSend: LoadFunction, //加载执行方法
+            error: erryFunction,  //错误执行方法
+            success: succFunction //成功执行方法
+        })
+
+        function LoadFunction()
+        {
+
+            //$("#list").html('加载中...');
+        }
+
+        function erryFunction(XMLHttpRequest, textStatus, errorThrown)
+        {
+            alert("网页访问失败");
+        }
+
+        function succFunction(json)
+        {
+
+            var balancejson = json.balance;
+            var usersjson = json.users;
+
+            console.log(balancejson);
+            $.each(usersjson, function (index, item)
+            {
+                //循环获取数据
+                $("#tab").append("<tr><td>" + usersjson[index].username +
+                    "</td><td>" + usersjson[index].sex +
+                    "</td><td>" + usersjson[index].time +
+                    "</td></tr>");
+
+            });
+
+            $("#balance").append(balancejson+" LAB");
+
+        };
+    });
+</script>
+<script type="text/javascript">
+    function checkSearch() {
+        if (document.getElementById('id1').value.length == 0) {
+            alert('用户ID输入不能为空！');
+            document.getElementById('id1').focus();
+            return false;
+        }
+    }
+
+    function checkConfirm() {
+        if (document.getElementById('id2').value.length == 0) {
+            alert('用户ID输入不能为空！');
+            document.getElementById('id2').focus();
+            return false;
+        }
+
+        if (document.getElementById('id3').value.length == 0) {
+            alert('密码输入不能为空！');
+            document.getElementById('id3').focus();
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

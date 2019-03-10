@@ -1,0 +1,842 @@
+<!-- FlatFy Theme - Andrea Galanti /-->
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Flatfy Free Flat and Responsive HTML5 Template ">
+    <meta name="author" content="">
+
+    <title>LAngle – Caring for health</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Google Web Font -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS-->
+    <link href="css/general.css" rel="stylesheet">
+
+    <!-- Owl-Carousel -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <script src="js/modernizr-2.6.2.min.js"></script>  <!-- Modernizr /-->
+
+    <!--table select格式-->
+    <style type="text/css">
+        table{ border-collapse:collapse;  }
+        table th, td {padding: 6px 25px;}
+
+        select{
+            margin-top:28px;
+            background: rgba(0,0,0,0);
+            width: 120px;
+            height: 40px;
+            font-family: "微软雅黑";
+            font-size: 18px;
+            border: 2px #3f4142 solid;
+            border-radius: 5px;
+        }
+        .select-head{
+            overflow: hidden;
+            width: 249px;
+            height: 40px;
+            box-sizing: border-box;
+            padding: 0 10px;
+            line-height: 40px;
+        }
+        .select-head .select-head-cont{
+            float: left;
+        }
+        .select-head .select-icon{
+            float: right;
+        }
+        .option{
+            text-indent: 10px;
+            margin-top: 1px;
+            width: 249px;
+            color: black;
+            background: rgba(236,111,111,0.1);
+            line-height: 25px;
+            border: 1px #cfcfcf solid;
+            display: none;
+
+        }
+        .option-item:hover{
+            background: rgba(204,106,67,0.3);
+        }
+    </style>
+
+</head>
+
+<body id="home">
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status"></div>
+</div>
+
+<!-- FullScreen -->
+<div class="intro-header">
+    <div class="col-xs-12 text-center abcen1">
+        <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">小天使大健康平台</h1>
+        <br>
+        <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">关注您的健康</h3>
+        <!--
+        <ul class="list-inline intro-social-buttons">
+            <li><a href="https://twitter.com/galantiandrea" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Twitter</span></a>
+            </li>
+            <li id="download" ><a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Free Download</span></a>
+            </li>
+        </ul>
+        -->
+    </div>
+    <!-- /.container -->
+    <div class="col-xs-12 text-center abcen wow fadeIn">
+        <div class="button_down ">
+            <a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#whatis"> <img class="img_scroll" src="img/icon/circle.png" alt=""> </a>
+        </div>
+    </div>
+</div>
+
+<!-- NavBar-->
+<nav class="navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#home">小天使</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+
+                <li class="menuItem"><a href="#whatis">状态</a></li>
+                <li class="menuItem"><a href="#useit">分析</a></li>
+                <li class="menuItem"><a href="#screen">病例</a></li>
+                <li class="menuItem"><a href="">在线商城</a></li>
+                <li class="menuItem"><a href="#contact">我的</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<!-- What is状态 -->
+<div id="whatis" class="content-section-b" style="border-top: 0">
+    <style>
+        input{
+            border: 0px;
+            outline:none;
+            cursor: pointer;
+            text-align:center;
+        }
+    </style>
+    <div class="container">
+
+        <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+            <h2>状态</h2>
+            <p class="lead" style="margin-top:0">实时健康</p>
+        </div>
+
+        <form action="" method="post">
+            <div class="row">
+                <div class="col-sm-4 wow fadeInDown text-center">
+                    <img class="rotate" src="img/icon/heart.svg" alt="Generic placeholder image">
+                    <h3>心率</h3>
+                    <input id="rate" class="lead" value="78/min" name="rate" readonly>
+                    <!--
+                    <p class="lead">78/min </p>
+                 <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+                </div><!-- /.col-lg-4 -->
+
+                <div class="col-sm-4 wow fadeInDown text-center">
+                    <img  class="rotate" src="img/icon/map.svg" alt="Generic placeholder image">
+                    <h3>步数</h3>
+                    <input id="step" class="lead" value="7890" name="step" readonly>
+                    <!--
+                  <p class="lead">7890 </p>
+                  <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+                </div><!-- /.col-lg-4 -->
+
+                <div class="col-sm-4 wow fadeInDown text-center">
+                    <img  class="rotate" src="img/icon/clock.png" alt="Generic placeholder image" >
+                    <h3>清醒时间</h3>
+                    <input id="awake" class="lead" value="8.5Hour" name = "awake" readonly>
+                    <!--
+                   <p class="lead">8.5Hour </p>
+                 <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+                </div><!-- /.col-lg-4 -->
+
+            </div><!-- /.row -->
+
+            <div class="row tworow">
+
+                <div class="col-sm-4  wow fadeInDown text-center">
+                    <img class="rotate" src="img/icon/sleep2.png" alt="Generic placeholder image">
+                    <h3>深度睡眠</h3>
+                    <input id="deep" class="lead" value="3Hour" name="deep" readonly>
+                    <!-- <p class="lead">3Hour </p>
+                   <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+                </div><!-- /.col-lg-4 -->
+
+                <div class="col-sm-4 wow fadeInDown text-center">
+                    <!--<img  class="rotate" src="img/icon/upload.png" alt="Generic placeholder image">-->
+                    <input type="image" class="rotate" src="img/icon/upload.png" alt="Generic placeholder image" name="button" value="submit">
+                    <h3>上传数据</h3>
+                    <!--<p class="lead">……</p>
+                     <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+                </div><!-- /.col-lg-4 -->
+
+                <div class="col-sm-4 wow fadeInDown text-center">
+                    <img  class="rotate" src="img/icon/sleep1.png" alt="Generic placeholder image">
+                    <h3>浅度睡眠</h3>
+                    <input id="shallow" class="lead" value="5.5Hour" name="shallow" readonly>
+                    <!-- <p class="lead">5.5Hour</p>
+                       <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+                </div><!-- /.col-lg-4 -->
+
+            </div><!-- /.row -->
+        </form>
+        <!--
+        <iframe name="formSubmit" id="formSubmit" style="display:none;"></iframe>
+        -->
+
+    </div>
+
+</div>
+
+<!-- Use it分析 -->
+<div id ="useit" class="content-section-a">
+
+    <!--步数-->
+    <div class="container">
+        <div class="row">
+
+            <!--图-->
+            <div class="col-sm-6 pull-right wow fadeInRightBig">
+                <canvas class="my-4 w-100" id="stepChart" width="900" height="580"></canvas>
+            </div>
+
+            <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <h3 class="section-heading">步数</h3>
+                    </div>
+
+                    <!--下拉选框-->
+                    <div class="col-md-4"><select data-am-selected>
+                            <option value="three" selected>3天</option>
+                            <option value="seven">7天</option>
+                            <option value="fifteen">15天</option>
+                            <option value="thirty">30天</option>
+                        </select>
+                    </div>
+
+                </div>
+                <!--描述-->
+                <div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs
+                </div>
+
+                <p class="lead">
+                    In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret.
+                    Sed virtutem ipsam inchoavit, nihil ampliusuma. Scien tiam pollicentur,
+                    uam non erat mirum sapientiae lorem cupido
+                    patria esse cariorem. Quae qui non vident, nihilamane umquam magnum ac cognitione.
+                </p>
+                <!--
+                <p><a class="btn btn-embossed btn-primary" href="#" role="button">View Details</a>
+                <a class="btn btn-embossed btn-info" href="#" role="button">Visit Website</a></p>-->
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+
+    <!--心率-->
+    <div class="content-section-b">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeftBig">
+                    <!--
+                     <div id="owl-demo-1" class="owl-carousel">
+                        <a href="img/iphone.png" class="image-link">
+                            <div class="item">
+                                <img  class="img-responsive img-rounded" src="img/iphone.png" alt="">
+                            </div>
+                        </a>
+                        <a href="img/iphone.png" class="image-link">
+                            <div class="item">
+                                <img  class="img-responsive img-rounded" src="img/iphone.png" alt="">
+                            </div>
+                        </a>
+                        <a href="img/iphone.png" class="image-link">
+                            <div class="item">
+                                <img  class="img-responsive img-rounded" src="img/iphone.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    -->
+                    <canvas class="my-4 w-100" id="rateChart" width="900" height="580"></canvas>
+                </div>
+
+                <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <h3 class="section-heading">心率</h3>
+                        </div>
+
+                        <!--下拉选框-->
+                        <div class="col-md-4"><select data-am-selected>
+                                <option value="three" selected>3天</option>
+                                <option value="seven">7天</option>
+                                <option value="fifteen">15天</option>
+                                <option value="thirty">30天</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs</div>
+                    <p class="lead">
+                        In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret.
+                        Sed virtutem ipsam inchoavit, nihil ampliusuma. Scien tiam pollicentur,
+                        uam non erat mirum sapientiae lorem cupido
+                        patria esse cariorem. Quae qui non vident, nihilamane umquam magnum ac cognitione.
+                    </p>
+
+                    <p><a class="btn btn-embossed btn-primary" href="#" role="button">View Details</a>
+                        <a class="btn btn-embossed btn-info" href="#" role="button">Visit Website</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-6 pull-right wow fadeInRightBig">
+                    <!--
+                        <img class="img-responsive " src="img/doge.png" alt="">
+                    -->
+                    <canvas class="my-4 w-100" id="sleepChart" width="900" height="580"></canvas>
+                </div>
+
+                <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <h3 class="section-heading">睡眠时间</h3>
+                        </div>
+
+                        <!--下拉选框-->
+                        <div class="col-md-4"><select data-am-selected>
+                                <option value="three" selected>3天</option>
+                                <option value="seven">7天</option>
+                                <option value="fifteen">15天</option>
+                                <option value="thirty">30天</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <p class="lead">A special thanks to Death to the Stock Photo for
+                        providing the photographs that you see in this template.
+                    </p>
+
+                    <ul class="descp lead2">
+                        <li><i class="glyphicon glyphicon-signal"></i> Reliable and Secure Platform</li>
+                        <li><i class="glyphicon glyphicon-refresh"></i> Everything is perfectly orgainized for future</li>
+                        <li><i class="glyphicon glyphicon-headphones"></i> Attach large file easily</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Screenshot病例 -->
+<div id="screen" class="content-section-b">
+
+    <!---->
+    <div  class="content-section-c ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center wrap_title white">
+                    <h2>病  例</h2>
+                    <br>
+                    <!--<p class="lead" style="margin-top:0">A special thanks to Death.</p>-->
+
+                    <!--病例表格-->
+                    <div>
+                        <table >
+                            <thead>
+                            <tr>
+                                <th>时间</th>
+                                <th>医院</th>
+                                <th>科室</th>
+                                <th>病名</th>
+                                <th>医生</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>2018/08/17</td>
+                                <td>明基医院</td>
+                                <td>内科</td>
+                                <td>阑尾炎</td>
+                                <td>张智涛</td>
+                            </tr>
+                            <tr>
+                                <td>2018/01/23</td>
+                                <td>明基医院</td>
+                                <td>内科</td>
+                                <td>腰肌劳损</td>
+                                <td>王奕盛</td>
+                            </tr>
+                            <tr>
+                                <td>2017/06/30</td>
+                                <td>九龙医院</td>
+                                <td>牙科</td>
+                                <td>智齿</td>
+                                <td>李一升</td>
+                            </tr>
+                            <tr>
+                                <td>2017/06/30</td>
+                                <td>九龙医院</td>
+                                <td>牙科</td>
+                                <td>智齿</td>
+                                <td>李一升</td>
+                            </tr>
+                            <tr>
+                                <td>2017/06/30</td>
+                                <td>九龙医院</td>
+                                <td>牙科</td>
+                                <td>智齿</td>
+                                <td>李一升</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--More Info按钮-->
+                <div class="col-md-6 col-md-offset-3 text-center wrap_title white">
+                    <div>
+                        <a class="btn btn-embossed btn-info" href="../病例/case.html" role="button">More Info</a>
+                    </div>
+                </div>
+
+
+                <!--不能删但没啥用-->
+                <div class="mockup-content">
+                    <div class="morph-button wow pulse morph-button-inflow morph-button-inflow-1">
+                        <button type="button "></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Credits在线商城 -->
+<div id="credits" class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="row wow bounceInUp" >
+                <div id="owl-demo" class="owl-carousel">
+
+                    <a href="img/slide/1.png" class="image-link">
+                        <div class="item">
+                            <img  class="img-responsive img-rounded" src="img/slide/1.png" alt="Owl Image">
+                            <div class="am-slider-desc">保温杯 120LAB</div>
+                        </div>
+                    </a>
+
+                    <a href="img/slide/2.png" class="image-link">
+                        <div class="item">
+                            <img  class="img-responsive img-rounded" src="img/slide/2.png" alt="Owl Image">
+                            <div class="am-slider-desc" >体检 200LAB</div>
+                        </div>
+                    </a>
+
+
+                    <!--
+                     <a href="img/slide/3.png" class="image-link">
+                         <div class="item">
+                             <img  class="img-responsive img-rounded" src="img/slide/3.png" alt="Owl Image">
+                             <div class="am-slider-desc" >养生泡脚桶 300LAB</div>
+                         </div>
+                     </a>
+
+                    <a href="img/slide/3.png" class="image-link">
+                         <div class="item">
+                             <img  class="img-responsive img-rounded" src="img/slide/3.png" alt="Owl Image">
+                         </div>
+                     </a>
+                     -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+<div id="credits" class="content-section-a">
+    <div class="container">
+        <div class="row">
+
+        <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+            <h2>Credits</h2>
+            <p class="lead" style="margin-top:0">A special thanks to Death.</p>
+         </div>
+
+            <div class="col-sm-6  block wow bounceIn">
+                <div class="row">
+                    <div class="col-md-4 box-icon rotate">
+                        <i class="fa fa-desktop fa-4x "> </i>
+                    </div>
+                    <div class="col-md-8 box-ct">
+                        <h3> Bootstrap </h3>
+                        <p> Lorem ipsum dolor sit ametconsectetur adipiscing elit. Suspendisse orci quam. </p>
+                    </div>
+              </div>
+          </div>
+          <div class="col-sm-6 block wow bounceIn">
+                <div class="row">
+                  <div class="col-md-4 box-icon rotate">
+                    <i class="fa fa-picture-o fa-4x "> </i>
+                  </div>
+                  <div class="col-md-8 box-ct">
+                    <h3> Owl-Carousel </h3>
+                    <p> Nullam mo  arcu ac molestie scelerisqu vulputate, molestie ligula gravida, tempus ipsum.</p>
+                  </div>
+                </div>
+          </div>
+      </div>
+
+      <div class="row tworow">
+            <div class="col-sm-6  block wow bounceIn">
+                <div class="row">
+                    <div class="col-md-4 box-icon rotate">
+                        <i class="fa fa-magic fa-4x "> </i>
+                    </div>
+                    <div class="col-md-8 box-ct">
+                        <h3> Codrops </h3>
+                        <p> Lorem ipsum dolor sit ametconsectetur adipiscing elit. Suspendisse orci quam. </p>
+                    </div>
+              </div>
+          </div>
+          <div class="col-sm-6 block wow bounceIn">
+                <div class="row">
+                  <div class="col-md-4 box-icon rotate">
+                    <i class="fa fa-heart fa-4x "> </i>
+                  </div>
+                  <div class="col-md-8 box-ct">
+                    <h3> Lorem Ipsum</h3>
+                    <p> Nullam mo  arcu ac molestie scelerisqu vulputate, molestie ligula gravida, tempus ipsum.</p>
+                  </div>
+                </div>
+          </div>
+      </div>
+    </div>
+</div>-->
+
+<!-- Banner Download -->
+<!--
+<div id="downloadlink" class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+            <h2>Download Free</h2>
+            <p class="lead" style="margin-top:0">Pay with a Tweet</p>
+            <p><a class="btn btn-embossed btn-primary view" role="button">Free Download</a></p>
+         </div>
+        </div>
+    </div>
+</div>-->
+
+<!-- Contact我的 -->
+<div id="contact" class="content-section-a">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+                <h2>我的</h2>
+                <p class="lead" style="margin-top:0">用户名</p>
+            </div>
+
+            <div class="col-sm-6  block wow bounceIn">
+                <div class="row">
+                    <div class="col-md-4 box-icon rotate">
+                        <i class="fa fa-money fa-4x "> </i>
+                    </div>
+                    <div class="col-md-8 box-ct">
+                        <h3> 余额 </h3>
+                        <p> 1130.00 LAB </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 block wow bounceIn">
+                <div class="row">
+                    <div class="col-md-4 box-icon rotate">
+                        <i class="fa fa-picture-o fa-4x "> </i>
+                    </div>
+                    <div class="col-md-8 box-ct">
+                        <h3> 身高&体重 </h3>
+                        <p> Ht:183cm<br>Wt:78kg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row tworow">
+            <div class="col-sm-6  block wow bounceIn">
+                <div class="row">
+                    <div class="col-md-4 box-icon rotate">
+                        <i class="fa fa-magic fa-4x "> </i>
+                    </div>
+                    <div class="col-md-8 box-ct">
+                        <h3> 年龄 </h3>
+                        <p> 36 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 block wow bounceIn">
+                <div class="row">
+                    <div class="col-md-4 box-icon rotate">
+
+                        <i class="fa fa-heart fa-4x"> </i>
+                    </div>
+                    <div class="col-md-8 box-ct">
+                        <a href="../交易记录/tran.html">
+                            <h3> 交易记录</h3>
+                            <p>点击查看交易记录</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+            <div class="container">
+                <div class="row">
+
+                <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+                    <h2>Contact Us</h2>
+                    <p class="lead" style="margin-top:0">A special thanks to Death.</p>
+                </div>
+
+                <form role="form" action="" method="post" >
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="InputName">Your Name</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="InputEmail">Your Email</label>
+                            <div class="input-group">
+                                <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required  >
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="InputMessage">Message</label>
+                            <div class="input-group">
+                                <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                            </div>
+                        </div>
+
+                        <input type="submit" name="submit" id="submit" value="Submit" class="btn wow tada btn-embossed btn-primary pull-right">
+                    </div>
+                </form>
+
+                <hr class="featurette-divider hidden-lg">
+                    <div class="col-md-5 col-md-push-1 address">
+                        <address>
+                        <h3>Office Location</h3>
+                        <p class="lead"><a href="">The Pentagon<br>
+                        Washington, DC 20301</a><br>
+                        Phone: XXX-XXX-XXXX<br>
+                        Fax: XXX-XXX-YYYY</p>
+                        </address>
+
+                        <h3>Social</h3>
+                        <li class="social">
+                        <a href="#"><i class="fa fa-facebook-square fa-size"> </i></a>
+                        <a href="#"><i class="fa  fa-twitter-square fa-size"> </i> </a>
+                        <a href="#"><i class="fa fa-google-plus-square fa-size"> </i></a>
+                        <a href="#"><i class="fa fa-flickr fa-size"> </i> </a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            -->
+</div>
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h3 class="footer-title">Follow Me!</h3>
+            </div> <!-- /col-xs-7 -->
+
+            <div class="col-md-5">
+                <div class="footer-banner">
+                    <h3 class="footer-title">小天使大健康平台</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/script.js"></script>
+<!-- StikyMenu -->
+<script src="js/stickUp.min.js"></script>
+<script type="text/javascript">
+    jQuery(function($) {
+        $(document).ready( function() {
+            $('.navbar-default').stickUp();
+
+        });
+    });
+
+</script>
+<!-- Smoothscroll -->
+<script type="text/javascript" src="js/jquery.corner.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script src="js/classie.js"></script>
+<script src="js/uiMorphingButton_inflow.js"></script>
+<!-- Magnific Popup core JS file -->
+<script src="js/jquery.magnific-popup.js"></script>
+<!-- Graphs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<!--心率图-->
+<script>
+    var ctx = document.getElementById("rateChart");
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            datasets: [{
+                data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                lineTension: 0,
+                backgroundColor: 'transparent',
+                borderColor: '#007bff',
+                borderWidth: 4,
+                pointBackgroundColor: '#007bff'
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            },
+            legend: {
+                display: false,
+            }
+        }
+    });
+</script>
+
+<script>
+    var ctx = document.getElementById("sleepChart");
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            datasets: [{
+                data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                lineTension: 0,
+                backgroundColor: 'transparent',
+                borderColor: '#007bff',
+                borderWidth: 4,
+                pointBackgroundColor: '#007bff'
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            },
+            legend: {
+                display: false,
+            }
+        }
+    });
+</script>
+<script>
+    var ctx = document.getElementById("stepChart");
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            datasets: [{
+                data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                lineTension: 0,
+                backgroundColor: 'transparent',
+                borderColor: '#007bff',
+                borderWidth: 4,
+                pointBackgroundColor: '#007bff'
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            },
+            legend: {
+                display: false,
+            }
+        }
+    });
+</script>
+</body>
+
+</html>
